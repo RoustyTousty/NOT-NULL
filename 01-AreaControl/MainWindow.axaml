@@ -5,5 +5,17 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="NotNull.MainWindow"
         Title="NotNull">
-    Wazzup
+    
+
+    <TabControl>
+        <TabItem Header= "AreaControl">
+            <Grid RowDefinitions= "*,*" ColumnDefinitions= "*,*,*,*">
+                
+            </Grid>
+        </TabItem>
+
+    </TabControl>
+
+
+    
 </Window>
