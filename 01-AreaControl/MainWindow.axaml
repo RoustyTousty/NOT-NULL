@@ -43,14 +43,14 @@
 
                 <StackPanel Grid.Column="1"
                             Grid.Row="1"
-                            Spacing="5"
+                            Spacing="40"
                             HorizontalAlignment="Center"
-                            VerticalAlignment="Center">
+                            VerticalAlignment="Top">
             
-                    <Button Content="Play"/>
-                    <Button Content="Save"/>
-                    <Button Content="Load"/>
-                    <Button Content="Grid"/>
+                    <Button Content="Play" FontSize= "30" Padding= "10"/>
+                    <Button Content="Save" FontSize= "30" Padding= "10"/>
+                    <Button Content="Load" FontSize= "30" Padding= "10"/>
+                    <Button Content="Grid" FontSize= "30" Padding= "10"/>
                 </StackPanel>
             
             </Grid>
