@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 class Game {
     private List<List<int>>? Grid { get; set; }
     private bool IsGameRunning { get; set; } = true;
+    private int CurrentPlayerIndex { get; set; } = 0;
     
     public int GridSize { get; set; }
     public int PlayerCount { get; set; }
@@ -16,7 +17,7 @@ class Game {
 
         InitGrid();
         InitPlayers();
-        StartRuntime();
+        StartGameRuntime();
     }
 
 
@@ -44,31 +45,48 @@ class Game {
     public void UpdateGrid()
     {
         // Seit prosta updato XAML Grid
+
+        // Check if game is done, ja yes tad StopGameRuntime()
     }
 
 
     public void MakeMove(int x, int y, Player player) 
     {
-        // Error handle
+        if (Grid == null) {
+            return;
+        }
+
+        // Check if move is valid
+
         Grid[x][y] = player.Id;
         UpdateGrid();
     }
 
 
-    public void StartRuntime() 
+    public void StartGameRuntime() 
     {
         if (Grid == null) {
             return;
         }
         
         while (IsGameRunning) {
-            // Loop all players un pagaidi kad vini izdara savu move
+            // Gaidi lidz speletajs nospiez
+            // await move method
+
+            UpdateGrid();
+
+            CurrentPlayerIndex = CurrentPlayerIndex + 1;
+            if (CurrentPlayerIndex >= Players.Count) {
+                CurrentPlayerIndex = 1;
+            }
         }
     }
 
-    public void StopRuntime()
+    public void StopGameRuntime()
     {
         IsGameRunning = false;
+
+        // Determine winner and show message
     }
 
 
