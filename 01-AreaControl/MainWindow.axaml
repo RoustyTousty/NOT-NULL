@@ -5,11 +5,6 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="NotNull.MainWindow"
         Title="NotNull">
-<<<<<<< HEAD
-    <Grid ColumnDefinitions="100,1.5*,4*" RowDefinitions="Auto,Auto,Auto"  Margin="4">
-    
-    </Grid>
-=======
     
 
     <TabControl>
@@ -23,5 +18,4 @@
 
 
     
->>>>>>> d4d1dd1200e8f371a668130690055c6e03bc7eea
 </Window>

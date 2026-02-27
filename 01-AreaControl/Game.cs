@@ -3,7 +3,8 @@ using System.Threading.Tasks;
 
 class Game {
     private List<List<int>>? Grid { get; set; }
-
+    private bool IsGameRunning { get; set; } = true;
+    
     public int GridSize { get; set; }
     public int PlayerCount { get; set; }
     public List<Player> Players { get; set; }
@@ -18,12 +19,15 @@ class Game {
         StartRuntime();
     }
 
+
+
     public void InitPlayers() 
     {
         for (int i = 0; i < PlayerCount; i++) {
             Players.Add(new Player(i + 1, $"Player{i + 1}"));
         }
     }
+
 
     public void InitGrid()
     {
@@ -36,10 +40,20 @@ class Game {
         }
     }
 
+
     public void UpdateGrid()
     {
         // Seit prosta updato XAML Grid
     }
+
+
+    public void MakeMove(int x, int y, Player player) 
+    {
+        // Error handle
+        Grid[x][y] = player.Id;
+        UpdateGrid();
+    }
+
 
     public void StartRuntime() 
     {
@@ -47,14 +61,26 @@ class Game {
             return;
         }
         
-        while (true) {
+        while (IsGameRunning) {
             // Loop all players un pagaidi kad vini izdara savu move
         }
     }
 
-    public void MakeMove(int x, int y, int player) 
+    public void StopRuntime()
     {
-        // Error handle
-        Grid[x][y] = player;
+        IsGameRunning = false;
+    }
+
+
+
+
+    public void SaveGame() 
+    {
+        // Save game state to save.txt file
+    }
+
+    public void LoadGame() 
+    {
+        // Load game state from save.txt file
     }
 }
