@@ -9,9 +9,52 @@
 
     <TabControl>
         <TabItem Header= "AreaControl">
-            <Grid RowDefinitions= "*,*" ColumnDefinitions= "*,*,*,*">
-                
+
+                <Grid ColumnDefinitions="3*,*" RowDefinitions="Auto,*">
+
+
+                <TextBlock Name="Moves"
+                        Text="Blue to move"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Grid.ColumnSpan="2"
+                        Padding= "10"
+                        HorizontalAlignment="Left"/>
+            
+
+                <Grid Grid.Column="0"
+                    Grid.Row="1"
+                    ColumnDefinitions="*,*,*"
+                    RowDefinitions="*,*,*">
+            
+                    <Rectangle Grid.Row="0" Grid.Column="0" Fill="White"/>
+                    <Rectangle Grid.Row="0" Grid.Column="1" Fill="White"/>
+                    <Rectangle Grid.Row="0" Grid.Column="2" Fill="White"/>
+            
+                    <Rectangle Grid.Row="1" Grid.Column="0" Fill="White"/>
+                    <Rectangle Grid.Row="1" Grid.Column="1" Fill="White"/>
+                    <Rectangle Grid.Row="1" Grid.Column="2" Fill="White"/>
+            
+                    <Rectangle Grid.Row="2" Grid.Column="0" Fill="White"/>
+                    <Rectangle Grid.Row="2" Grid.Column="1" Fill="White"/>
+                    <Rectangle Grid.Row="2" Grid.Column="2" Fill="White"/>
+                </Grid>
+            
+
+                <StackPanel Grid.Column="1"
+                            Grid.Row="1"
+                            Spacing="5"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+            
+                    <Button Content="Play"/>
+                    <Button Content="Save"/>
+                    <Button Content="Load"/>
+                    <Button Content="Grid"/>
+                </StackPanel>
+            
             </Grid>
+
         </TabItem>
 
     </TabControl>
