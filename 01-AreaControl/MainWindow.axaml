@@ -17,31 +17,53 @@
                         Grid.ColumnSpan="2"
                         Padding= "10"
                         HorizontalAlignment="Left"/>
-            
-                <Grid Grid.Column="0"
-                    Grid.Row="1"
-                    ColumnDefinitions="*,*,*"
-                    RowDefinitions="*,*,*">
 
-                    <Grid.Styles>
-                        <Style Selector="Border">
+            
+                    <Grid Grid.Column="0"
+                        Grid.Row="1"
+                        ColumnDefinitions="*,*,*"
+                        RowDefinitions="*,*,*">
+                    
+                      <Grid.Styles>
+
+                          <Style Selector="Button">
+                            
                             <Setter Property="BorderBrush" Value="Black"/>
                             <Setter Property="BorderThickness" Value="1"/>
-                        </Style>
-                    </Grid.Styles>
-                    
-                    <Border Grid.Row="0" Grid.Column="0"><Rectangle Fill="White"/></Border>
-                    <Border Grid.Row="0" Grid.Column="1"><Rectangle Fill="White"/></Border>
-                    <Border Grid.Row="0" Grid.Column="2"><Rectangle Fill="White"/></Border>
-            
-                    <Border Grid.Row="1" Grid.Column="0"><Rectangle Fill="White"/></Border>
-                    <Border Grid.Row="1" Grid.Column="1"><Rectangle Fill="White"/></Border>
-                    <Border Grid.Row="1" Grid.Column="2"><Rectangle Fill="White"/></Border>
-            
-                    <Border Grid.Row="2" Grid.Column="0"><Rectangle Fill="White"/></Border>
-                    <Border Grid.Row="2" Grid.Column="1"><Rectangle Fill="White"/></Border>
-                    <Border Grid.Row="2" Grid.Column="2"><Rectangle Fill="White"/></Border>
-                </Grid>
+                            <Setter Property="Background" Value="White"/>
+                            <Setter Property="Padding" Value="0"/>
+                            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                            <Setter Property="VerticalAlignment" Value="Stretch"/>
+
+
+                            <Setter Property="Template">
+                                <ControlTemplate>
+                                    <Border Background="{TemplateBinding Background}"
+                                            BorderBrush="{TemplateBinding BorderBrush}"
+                                            BorderThickness="{TemplateBinding BorderThickness}">
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter>
+
+
+                          </Style>
+
+                      </Grid.Styles>
+                  
+                      <Button Grid.Row="0" Grid.Column="0" Click="OnCellClick"/>
+                      <Button Grid.Row="0" Grid.Column="1" Click="OnCellClick"/>
+                      <Button Grid.Row="0" Grid.Column="2" Click="OnCellClick"/>
+                  
+                      <Button Grid.Row="1" Grid.Column="0" Click="OnCellClick"/>
+                      <Button Grid.Row="1" Grid.Column="1" Click="OnCellClick"/>
+                      <Button Grid.Row="1" Grid.Column="2" Click="OnCellClick"/>
+                  
+                      <Button Grid.Row="2" Grid.Column="0" Click="OnCellClick"/>
+                      <Button Grid.Row="2" Grid.Column="1" Click="OnCellClick"/>
+                      <Button Grid.Row="2" Grid.Column="2" Click="OnCellClick"/>
+                  
+                    </Grid>
+
             
                 <StackPanel Grid.Column="1"
                             Grid.Row="1"
