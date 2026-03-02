@@ -1,14 +1,8 @@
+namespace NotNull;
 
-class Player
+public enum Player
 {
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public int Score { get; set; }
-
-    public Player(int id, string name)
-    {
-        Id = id;
-        Name = name;
-        Score = 0;
-    }
+    None,
+    Player1,
+    Player2
 }
