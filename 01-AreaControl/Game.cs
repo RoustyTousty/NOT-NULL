@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -8,7 +9,7 @@ class Game {
     
     public int GridSize { get; set; }
     public int PlayerCount { get; set; }
-    public List<Player> Players { get; set; }
+    public required List<Player> Players { get; set; }
 
     public Game(int gridSize, int playerCount = 2) 
     {
