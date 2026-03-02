@@ -1,0 +1,26 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="NotNull.ResizeDialog"
+        Title="Resize Board"
+        Width="250" Height="150"
+        WindowStartupLocation="CenterOwner"
+        x:DataType="vm:ResizeDialogViewModel"
+        xmlns:vm="using:NotNull">
+
+    <StackPanel Margin="10" Spacing="10">
+
+        <StackPanel Orientation="Horizontal" Spacing="5">
+            <TextBlock Text="Rows:" VerticalAlignment="Center"/>
+            <NumericUpDown Minimum="1" Maximum="20" Value="{Binding Rows}"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Spacing="5">
+            <TextBlock Text="Columns:" VerticalAlignment="Center"/>
+            <NumericUpDown Minimum="1" Maximum="20" Value="{Binding Columns}"/>
+        </StackPanel>
+
+        <Button Content="Apply"
+                HorizontalAlignment="Center"
+                Command="{Binding ApplyCommand}"/>
+    </StackPanel>
+</Window>
